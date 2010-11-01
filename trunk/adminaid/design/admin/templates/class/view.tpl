@@ -197,7 +197,7 @@
 
 {* ADMINAID FIX START *}
 <form action={concat( '/aid/class_translation/', $class.id )|ezurl} method="GET">
-    <input class="button" type="submit" value="Translate on all languages" />
+    <input class="button" type="submit" value="{'Translate on all languages'|i18n( 'design/adminaid/translations' )}" />
 </form>
 {* ADMINAID FIX END *}
 {include uri="design:class/windows.tpl"}
