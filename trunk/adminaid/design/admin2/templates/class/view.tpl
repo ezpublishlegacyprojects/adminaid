@@ -90,7 +90,7 @@
 
     <div class="block">
         <h6>{'Object count'|i18n( 'design/admin/class/view' )}:</h6>
-        {* ADMINAID FIX *}
+        {* ADMINAID FIX START *}
         <a href={concat( '/aid/object_list/', $class.id )|ezurl()}>{$class.object_count}</a>
         {* ADMINAID FIX END *}
     </div>
@@ -224,6 +224,12 @@
 {* DESIGN: Control bar END *}</div>
 </div>
 </div>
+
+{* ADMINAID FIX START *}
+<form action={concat( '/aid/class_translation/', $class.id )|ezurl} method="GET">
+    <input class="button" type="submit" value="Translate on all languages" />
+</form>
+{* ADMINAID FIX END *}
 {include uri="design:class/windows.tpl"}
 
 </div>

@@ -195,6 +195,11 @@
 {* DESIGN: Control bar END *}</div></div></div></div></div></div>
 </div>
 
+{* ADMINAID FIX START *}
+<form action={concat( '/aid/class_translation/', $class.id )|ezurl} method="GET">
+    <input class="button" type="submit" value="Translate on all languages" />
+</form>
+{* ADMINAID FIX END *}
 {include uri="design:class/windows.tpl"}
 
 </div>
