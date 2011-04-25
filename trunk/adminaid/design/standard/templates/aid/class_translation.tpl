@@ -2,7 +2,7 @@
 
 <p>
     {'Note that this class is not in editing mode while translating it.'|i18n( 'design/adminaid/translations' )}
-    {'This means it potentially can be edited by others at the same time, creating a conflict.'|i18n( 'design/adminaid/translations' )}
+    {'This means it can potentially be edited by others at the same time, creating a conflict.'|i18n( 'design/adminaid/translations' )}
 </p>
 
 <form action={concat( 'aid/class_translation/', $class.id )|ezurl()} method="POST">
@@ -46,13 +46,15 @@
         {foreach $class_name_list as $class_name}
             {set $class_lang_array = $class_lang_array|append( $class_name.language_locale )}
         {/foreach}
-        <p>
+        <br /><br />
+        <fieldset>
+            <legend>{'Add languages to this class'|i18n( 'design/adminaid/translations' )}</legend>
             {foreach $language_list as $language}
                 {if $class_lang_array|contains( $language.locale )|not()}
                     <input type="checkbox" name="LanguageList[]" value="{$language.id}:{$language.locale}" />{$language.name}<br />
                 {/if}
             {/foreach}
-            <input type="submit" name="AddLanguage" value="{'Add language'|i18n( 'design/adminaid/translations' )}" />
-        </p>
+            <input type="submit" name="AddLanguage" value="{'Add selected languages'|i18n( 'design/adminaid/translations' )}" />
+        </fieldset>
     {/if}
 </form>

@@ -9,4 +9,9 @@ UserSwitchIDLimit[]=14
 UserClass[]
 UserClass[]=user
 
+# Enable IP limitations on user switch
+LimitByIP=enabled
+IPList[]
+#IPList[]=127.0.0.1
+
 */ ?>
