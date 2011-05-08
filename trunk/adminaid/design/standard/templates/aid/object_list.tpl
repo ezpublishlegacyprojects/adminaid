@@ -1,4 +1,4 @@
-<h1>Object list for class '<a href={concat( '/class/view/', $class_id )|ezurl()}>{$class.name|wash()}</a>'</h1>
+<h1>{'Object list for class "%classname"'|i18n( 'adminaid', '', hash( '%classname', concat( '<a href=', concat( '/class/view/', $class_id )|ezurl(), '>', $class.name|wash(), '</a>' ) ) )}</h1>
 
 <p>{'Showing %count of %total objects:'|i18n( 'adminaid', '', 
         hash( '%count', $count, 
