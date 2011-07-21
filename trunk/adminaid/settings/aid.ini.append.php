@@ -10,7 +10,7 @@ UserClass[]
 UserClass[]=user
 
 # Enable IP limitations on user switch
-LimitByIP=enabled
+LimitByIP=disabled
 IPList[]
 #IPList[]=127.0.0.1
 

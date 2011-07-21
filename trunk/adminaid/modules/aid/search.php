@@ -16,7 +16,8 @@ if ( $http->hasVariable( 'searchword' ) )
 	$table_texts = $ini->variable( 'SearchDatabase', 'TableText' );
 
 	$searchword = $http->variable( 'searchword' );
-	$limit = intval( $http->variable( 'limit' ) );
+	if ( $http->hasVariable( 'limit' ) )
+		$limit = intval( $http->variable( 'limit' ) );
 	foreach ( $search_tables as $class )
 	{
 		$cond = null;

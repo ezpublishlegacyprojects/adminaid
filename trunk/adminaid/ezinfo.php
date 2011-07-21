@@ -24,7 +24,7 @@
 // ## END COPYRIGHT, LICENSE AND WARRANTY NOTICE ##
 //
 
-class ezwebinInfo
+class ezAdminAidInfo
 {
     static function info()
     {

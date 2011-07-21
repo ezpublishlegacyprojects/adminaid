@@ -21,7 +21,7 @@
 			<a href={concat( '/aid/object_view/', $object.contentobject_id )|ezurl()}>"{$object.name}"</a>
 		{/case}
 		{case match='ezcontentobjectattribute'}
-			<a href={concat( '/aid/object_view/', $object.contentobject_id )|ezurl()}>"{$object.contentclass_attribute_name}"</a>
+			<a href={concat( '/aid/object_view/', $object.contentobject_id )|ezurl()}>"{$object.contentclassattribute_name}"</a>
 		{/case}
 		{case match='ezcontentobjectversion'}
 			<a href={concat( '/content/history/', $object.contentobject_id )|ezurl()}>"{$object.name}"</a>
